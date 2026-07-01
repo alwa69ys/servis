@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات پروژه | طراح گرافیک</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">طراح گرافیک</div>
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="about.html">درباره من</a></li>
+                    <li><a href="portfolio.html">نمونه کارها</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="skills.html">مهارت‌ها</a></li>
+                    <li><a href="testimonials.html">نظرات مشتریان</a></li>
+                    <li><a href="blog.html">وبلاگ</a></li>
+                    <li><a href="contact.html">تماس</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1>جزئیات پروژه</h1>
+            <div class="card" id="project-detail">
+                <!-- جزئیات پروژه در اینجا نمایش داده می‌شود -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>تمامی حقوق برای این سایت محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- اسکریپت برای دریافت پارامتر و نمایش جزئیات -->
+    <script>
+        // دریافت پارامتر project از URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('project');
+
+        // نمایش جزئیات پروژه بر اساس projectId
+        const projectDetail = document.getElementById('project-detail');
+
+        // اطلاعات پروژه‌ها
+        const projects = {
+            1: {
+                title: "طراحی لوگو برای برند X",
+                category: "طراحی گرافیک",
+                description: "این لوگو برای برند فرضی X با هدف ایجاد یک هویت بصری مدرن و ماندگار طراحی شده است. در طراحی از سبک مینیمال، رنگ‌های شاد و ترکیب‌بندی ساده استفاده شده تا لوگو در ذهن مخاطب ماندگار باشد و در رسانه‌های مختلف به‌خوبی قابل استفاده باشد.",
+                features: ["طراحی مینیمال و مدرن", "قابلیت استفاده در چاپ و فضای دیجیتال", "طراحی نسخه رنگی و تک‌رنگ", "رعایت اصول هویت بصری"],
+                tools: ["Adobe Photoshop", "Adobe Illustrator"],
+                image: "images/project1.jpg"
+            },
+            2: {
+                title: "طراحی رابط کاربری فروشگاه اینترنتی",
+                category: "UI Design",
+                description: "طراحی رابط کاربری یک فروشگاه اینترنتی با تمرکز بر سادگی، تجربه کاربری مناسب و دسترسی آسان به محصولات. تمامی صفحات با هدف افزایش راحتی کاربران طراحی شده‌اند.",
+                features: ["صفحه اصلی", "صفحه محصولات", "صفحه جزئیات محصول", "سبد خرید", "صفحه پرداخت", "طراحی واکنش‌گرا"],
+                tools: ["Figma", "Adobe Photoshop"],
+                image: "images/project2.jpg"
+            },
+            3: {
+                title: "طراحی وب‌سایت شخصی",
+                category: "توسعه وب",
+                description: "طراحی و پیاده‌سازی یک وب‌سایت شخصی برای معرفی مهارت‌ها، سوابق، نمونه‌کارها و اطلاعات تماس با ظاهری مدرن و کاربرپسند.",
+                features: ["صفحه اصلی", "درباره من", "نمونه‌کارها", "مهارت‌ها", "فرم تماس", "طراحی ریسپانسیو"],
+                tools: ["HTML5", "CSS3", "JavaScript"],
+                image: "images/project3.jpg"
+            },
+            4: {
+                title: "سیستم مدیریت دانشجویان",
+                category: "برنامه‌نویسی",
+                description: "طراحی یک سامانه برای ثبت، ویرایش، حذف و جستجوی اطلاعات دانشجویان با رابط کاربری ساده و ساختار منظم.",
+                features: ["ثبت اطلاعات دانشجو", "ویرایش اطلاعات", "حذف اطلاعات", "جستجوی سریع", "نمایش لیست دانشجویان"],
+                tools: ["HTML", "CSS", "JavaScript", "SQL"],
+                image: "images/project4.jpg"
+            },
+            5: {
+                title: "وب‌سایت معرفی فیلم و سریال",
+                category: "توسعه وب",
+                description: "طراحی یک وب‌سایت برای معرفی فیلم‌ها و سریال‌ها با امکان جستجو، مشاهده اطلاعات و نمایش دسته‌بندی‌های مختلف.",
+                features: ["صفحه اصلی", "دسته‌بندی ژانرها", "جستجوی فیلم", "نمایش اطلاعات فیلم", "نمایش امتیاز کاربران"],
+                tools: ["HTML5", "CSS3", "JavaScript"],
+                image: "images/project5.jpg"
+            },
+            6: {
+                title: "طراحی پوستر تبلیغاتی",
+                category: "طراحی گرافیک",
+                description: "طراحی یک پوستر تبلیغاتی با استفاده از اصول طراحی گرافیک، تایپوگرافی مناسب و ترکیب رنگ‌های جذاب برای افزایش تأثیرگذاری بصری.",
+                features: ["طراحی مدرن", "رنگ‌بندی حرفه‌ای", "تایپوگرافی خوانا", "مناسب برای چاپ و شبکه‌های اجتماعی"],
+                tools: ["Adobe Photoshop", "Adobe Illustrator"],
+                image: "images/project6.jpg"
+            },
+            7: {
+                title: "اپلیکیشن مدیریت وظایف",
+                category: "برنامه‌نویسی",
+                description: "توسعه یک برنامه مدیریت وظایف برای ثبت، ویرایش و حذف کارهای روزانه با رابط کاربری ساده و کاربردی.",
+                features: ["افزودن وظیفه", "حذف وظیفه", "ویرایش وظیفه", "علامت‌گذاری وظایف انجام‌شده", "رابط کاربری ساده"],
+                tools: ["HTML5", "CSS3", "JavaScript"],
+                image: "images/project7.jpg"
+            },
+            8: {
+                title: "طراحی هویت بصری کافه",
+                category: "طراحی گرافیک",
+                description: "طراحی مجموعه‌ای از عناصر هویت بصری برای یک کافه فرضی شامل لوگو، کارت ویزیت، منوی دیجیتال و قالب پست شبکه‌های اجتماعی.",
+                features: ["طراحی لوگو", "کارت ویزیت", "قالب اینستاگرام", "پالت رنگ", "انتخاب فونت اختصاصی"],
+                tools: ["Adobe Illustrator", "Adobe Photoshop"],
+                image: "images/project8.jpg"
+            },
+            9: {
+                title: "طراحی داشبورد مدیریتی",
+                category: "UI/UX",
+                description: "طراحی رابط کاربری یک داشبورد مدیریتی برای نمایش آمار، گزارش‌ها و اطلاعات کاربران با ظاهری مدرن و ساده.",
+                features: ["نمودارهای آماری", "پنل مدیریت", "جدول اطلاعات", "طراحی واکنش‌گرا"],
+                tools: ["Figma", "Adobe XD"],
+                image: "images/project9.jpg"
+            },
+            10: {
+                title: "ماشین حساب تحت وب",
+                category: "توسعه وب",
+                description: "پیاده‌سازی یک ماشین حساب با رابط کاربری مدرن و قابلیت انجام عملیات اصلی ریاضی با استفاده از فناوری‌های سمت کاربر.",
+                features: ["جمع", "تفریق", "ضرب", "تقسیم", "طراحی مدرن", "رابط کاربری واکنش‌گرا"],
+                tools: ["HTML5", "CSS3", "JavaScript"],
+                image: "images/project10.jpg"
+            }
+        };
+
+        // نمایش جزئیات پروژه
+        if (projects[projectId]) {
+            const project = projects[projectId];
+            projectDetail.innerHTML = `
+                <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">${project.category}</p>
+                <img src="${project.image}" alt="${project.title}" style="max-width: 100%; border-radius: 5px; margin-bottom: 20px;">
+                <h2>${project.title}</h2>
+                <p><strong>توضیحات:</strong></p>
+                <p>${project.description}</p>
+                <p><strong>ویژگی‌ها:</strong></p>
+                <ul>
+                    ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                </ul>
+                <p><strong>ابزارهای استفاده شده:</strong></p>
+                <ul>
+                    ${project.tools.map(tool => `<li>${tool}</li>`).join('')}
+                </ul>
+                <a href="portfolio.html" class="button">بازگشت به گالری</a>
+            `;
+        } else {
+            projectDetail.innerHTML = `
+                <p>پروژه‌ای یافت نشد.</p>
+                <a href="portfolio.html" class="button">بازگشت به گالری</a>
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه کارها | طراح گرافیک و توسعه‌دهنده</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="portfolio">
+
+</body>
+
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">طراح گرافیک</div>
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="about.html">درباره من</a></li>
+                    <li><a href="portfolio.html">نمونه کارها</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="skills.html">مهارت‌ها</a></li>
+                    <li><a href="testimonials.html">نظرات مشتریان</a></li>
+                    <li><a href="blog.html">وبلاگ</a></li>
+                    <li><a href="contact.html">تماس</a></li>
+ 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1>نمونه کارها</h1>
+            <p>نمونه کار های انجام شده توسط من</p>
+
+            <!-- دسته‌بندی پروژه‌ها -->
+            <div style="margin: 20px 0; text-align: center;">
+                <button class="button" onclick="filterProjects('all')">همه پروژه‌ها</button>
+                <button class="button" onclick="filterProjects('graphic')">طراحی گرافیک</button>
+                <button class="button" onclick="filterProjects('ui')">UI/UX</button>
+                <button class="button" onclick="filterProjects('web')">توسعه وب</button>
+                <button class="button" onclick="filterProjects('programming')">برنامه‌نویسی</button>
+            </div>
+
+            <!-- گالری پروژه‌ها -->
+            <div class="gallery" id="projects-gallery">
+                <!-- پروژه 1: طراحی لوگو -->
+                <div class="card project" data-category="graphic">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">طراحی گرافیک</p>
+                    <img src="images/project1.jpg" alt="طراحی لوگو برای برند X">
+                      <h3>طراحی لوگو برای برند X</h3>
+                    <a href="portfolio-detail.html?project=1" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 2: طراحی رابط کاربری فروشگاه اینترنتی -->
+                <div class="card project" data-category="ui">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">UI Design</p>
+                    <img src="images/project2.jpg" alt="طراحی رابط کاربری فروشگاه اینترنتی">
+                    <h3>طراحی رابط کاربری فروشگاه اینترنتی</h3>
+                    <a href="portfolio-detail.html?project=2" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 3: طراحی وب‌سایت شخصی -->
+                <div class="card project" data-category="web">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">توسعه وب</p>
+                    <img src="images/project3.jpg" alt="طراحی وب‌سایت شخصی">
+                    <h3>طراحی وب‌سایت شخصی</h3>
+                    <a href="portfolio-detail.html?project=3" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 4: سیستم مدیریت دانشجویان -->
+                <div class="card project" data-category="programming">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">برنامه‌نویسی</p>
+                    <img src="images/project4.jpg" alt="سیستم مدیریت دانشجویان">
+                    <h3>سیستم مدیریت دانشجویان</h3>
+                    <a href="portfolio-detail.html?project=4" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 5: وب‌سایت معرفی فیلم و سریال -->
+                <div class="card project" data-category="web">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">توسعه وب</p>
+                    <img src="images/project5.jpg" alt="وب‌سایت معرفی فیلم و سریال">
+                    <h3>وب‌سایت معرفی فیلم و سریال</h3>
+                    <a href="portfolio-detail.html?project=5" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 6: طراحی پوستر تبلیغاتی -->
+                <div class="card project" data-category="graphic">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">طراحی گرافیک</p>
+                    <img src="images/project6.jpg" alt="طراحی پوستر تبلیغاتی">
+                    <h3>طراحی پوستر تبلیغاتی</h3>
+                    <a href="portfolio-detail.html?project=6" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 7: اپلیکیشن مدیریت وظایف -->
+                <div class="card project" data-category="programming">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">برنامه‌نویسی</p>
+                    <img src="images/project7.jpg" alt="اپلیکیشن مدیریت وظایف">
+                    <h3>اپلیکیشن مدیریت وظایف</h3>
+                    <a href="portfolio-detail.html?project=7" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 8: طراحی هویت بصری کافه -->
+                <div class="card project" data-category="graphic">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">طراحی گرافیک</p>
+                    <img src="images/project8.jpg" alt="طراحی هویت بصری کافه">
+                    <h3>طراحی هویت بصری کافه</h3>
+                    <a href="portfolio-detail.html?project=8" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 9: طراحی داشبورد مدیریتی -->
+                <div class="card project" data-category="ui">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">UI/UX</p>
+                    <img src="images/project9.jpg" alt="طراحی داشبورد مدیریتی">
+                    <h3>طراحی داشبورد مدیریتی</h3>
+                    <a href="portfolio-detail.html?project=9" class="button">مشاهده جزئیات</a>
+                </div>
+
+                <!-- پروژه 10: ماشین حساب تحت وب -->
+                <div class="card project" data-category="web">
+                    <p style="color: var(--secondary-color); font-size: 14px; margin-bottom: 10px;">توسعه وب</p>
+                    <img src="images/project10.jpg" alt="ماشین حساب تحت وب">
+                    <h3>ماشین حساب تحت وب</h3>
+                    <a href="portfolio-detail.html?project=10" class="button">مشاهده جزئیات</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>تمامی تصاویر استفاده شده از گوگل جمع اوری شده و صرفا برای زیباتر کردن محیط سایت است</p>
+        </div>
+    </footer>
+
+    <!-- اسکریپت برای فیلتر کردن پروژه‌ها -->
+    <script>
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                if (category === 'all' || project.getAttribute('data-category') === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
